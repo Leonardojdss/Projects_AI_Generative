@@ -1,6 +1,7 @@
-#Para usar este codigo precisa ter uma key da open ai em um arquivo .env
+# Para usar este codigo precisa ter uma key da open ai em um arquivo .env
 
-# finalizei este projeto pessoal (vídeo apresentação - Arquivo Video_apresentação_RAG_LangChain.mp4), neste projeto desenvolvi uma IA generativa que pode usar os dados que 
+# finalizei este projeto pessoal (vídeo apresentação - https://www.linkedin.com/feed/update/urn:li:activity:7207838412425375744/), neste projeto 
+# desenvolvi uma IA generativa que pode usar os dados que 
 # forneço para responder as perguntas que podem ser feitas sobre o assunto do dado anexado, no vídeo demonstrado faço uma pergunta 
 # sobre mim para o ChatGPT e obviamente ele não saberia responder e na segunda parte do vídeo demonstro a etapa de fornecer dados 
 # sobre mim e em seguida a minha IA consegue responder perguntas sobre mim.
