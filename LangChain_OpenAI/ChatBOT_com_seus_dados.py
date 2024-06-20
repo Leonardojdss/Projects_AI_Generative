@@ -1,3 +1,19 @@
+#Para usar este codigo precisa ter uma key da open ai em um arquivo .env
+
+# finalizei este projeto pessoal (vídeo apresentação - Arquivo Video_apresentação_RAG_LangChain.mp4), neste projeto desenvolvi uma IA generativa que pode usar os dados que 
+# forneço para responder as perguntas que podem ser feitas sobre o assunto do dado anexado, no vídeo demonstrado faço uma pergunta 
+# sobre mim para o ChatGPT e obviamente ele não saberia responder e na segunda parte do vídeo demonstro a etapa de fornecer dados 
+# sobre mim e em seguida a minha IA consegue responder perguntas sobre mim.
+
+# A arquitetura do meu projeto consiste em usar o Python e as famosas bibliotecas LangChain, OpenAi e Streamlit, utilizo a LLM da OpenAi 
+# mais especificamente o modelo GPT-4o.
+
+# Observação, compreendo que atualmente as atuais IAs generativas públicas possibilitam fazer upload de documentos e consegue fazer 
+# o que a minha IA consegue, porém em uso profissional isso não é recomendado, por questões de segurança, dados 
+# corporativos são sigilosos então não podem ser compartilhados com IAs públicas como o ChatGPT, então é sempre recomendado 
+# que as empresas desenvolvam as suas próprias e apenas utilizem os modelos LLM disponíveis, a minha arquitetura usa a API da OpenAI 
+# para simular essa recomendação, desta forma ela não usa meus dados para treinamentos futuros.
+
 #Importação das bibliotecas
 import streamlit as st
 from langchain_community.document_loaders import TextLoader
