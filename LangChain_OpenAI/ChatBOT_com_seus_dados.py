@@ -1,4 +1,4 @@
-# Para usar este codigo precisa ter uma key da open ai em um arquivo .env
+# Para usar este codigo precisa ter uma key da OpenAI em um arquivo .env
 
 # finalizei este projeto pessoal (vídeo apresentação - https://www.linkedin.com/feed/update/urn:li:activity:7207838412425375744/), neste projeto 
 # desenvolvi uma IA generativa que pode usar os dados que 
