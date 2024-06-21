@@ -1,7 +1,7 @@
 import openai
 
 # Configurar a chave da API
-openai.api_key = "sk-proj-SJwZITYfQ43n0sw9LUl7T3BlbkFJhEIaRRVdFXdkhBC1P3gj"
+openai.api_key = "Cole aqui sua chave privada da OpenAI"
 
 # Variaiveis da viagem
 numero_de_dias = 7
