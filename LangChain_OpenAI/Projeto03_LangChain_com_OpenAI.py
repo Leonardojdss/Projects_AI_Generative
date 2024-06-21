@@ -12,7 +12,7 @@ prompt = f"Crie um roteiro de viagem de {numero_de_dias} dias, para uma familia 
 # Instanciando o ChatOpenAI, usando o langChain a construção do chat se torna mais rapida e direta.
 llm = ChatOpenAI(model="gpt-4",
                 temperature=0.5,
-                api_key="sk-proj-SJwZITYfQ43n0sw9LUl7T3BlbkFJhEIaRRVdFXdkhBC1P3gj")
+                api_key="Cole aqui sua chave privada da OpenAI")
 
 # Retorno do roteiro de viagem
 resposta = llm.invoke(prompt)
