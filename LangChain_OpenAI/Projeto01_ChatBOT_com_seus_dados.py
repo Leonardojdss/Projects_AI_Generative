@@ -1,4 +1,6 @@
-# Para usar este codigo precisa ter uma key da OpenAI em um arquivo .env
+# Para usar este codigo precisa ter uma key da OpenAI
+
+# Script desenvolvido por mim, para estudo de RAG
 
 # finalizei este projeto pessoal (vídeo apresentação - https://www.linkedin.com/feed/update/urn:li:activity:7207838412425375744/), neste projeto 
 # desenvolvi uma IA generativa que pode usar os dados que 
@@ -15,7 +17,7 @@
 # que as empresas desenvolvam as suas próprias e apenas utilizem os modelos LLM disponíveis, a minha arquitetura usa a API da OpenAI 
 # para simular essa recomendação, desta forma ela não usa meus dados para treinamentos futuros.
 
-#Importação das bibliotecas
+# Importação das bibliotecas
 import streamlit as st
 from langchain_community.document_loaders import TextLoader
 from langchain_community.embeddings import OpenAIEmbeddings
@@ -23,18 +25,17 @@ from langchain_community.vectorstores import FAISS
 from langchain.prompts import PromptTemplate
 from langchain_community.chat_models import ChatOpenAI
 from langchain.chains import LLMChain
-from dotenv import load_dotenv
-import os
 import tempfile
+import openai
 
-# Carregar variáveis de ambiente
-load_dotenv()
+# Chave da API OpenAI
+openai.api_key = "COLE_AQUI_SUA_CHAVE_OPENAI"
 
 # Função para carregar documentos e criar base de dados de vetores
 def setup_database(file_path):
     loader = TextLoader(file_path)
     documents = loader.load()
-    embeddings = OpenAIEmbeddings()
+    embeddings = OpenAIEmbeddings(openai_api_key=openai.api_key)  # Passando a chave de API aqui
     data_base = FAISS.from_documents(documents, embeddings)
     return data_base
 
@@ -45,7 +46,7 @@ def retrieve_info(query, data_base):
 
 # Função para configurar a cadeia LLM
 def setup_llm_chain():
-    llm = ChatOpenAI(temperature=0.5, model="gpt-4o")
+    llm = ChatOpenAI(temperature=0.5, model="gpt-4o", openai_api_key=openai.api_key)  # Passando a chave de API aqui
 
     template = """
     Voce é um novo chatbot superinteligente do mercado, e que vai ser possivel
